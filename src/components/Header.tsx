@@ -5,7 +5,7 @@ const Header = () => {
   const [activeMenu, setActiveMenu] = useState('Главная');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const menuItems = ['Главная', 'Фильмы', 'Сериалы', 'Прямой эфир', 'О канале'];
+  const menuItems = ['Главная', 'Фильмы', 'Сериалы', 'Программы', 'О канале', 'Контакты'];
 
   return (
     <>

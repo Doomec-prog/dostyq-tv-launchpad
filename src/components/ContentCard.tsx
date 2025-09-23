@@ -13,7 +13,7 @@ const ContentCard = ({ title, image, isAction = false, actionText }: ContentCard
           {actionText}
         </div>
         <div className="text-dostyq-text text-3xl">
-          ⇒⇒
+          &gt;&gt;
         </div>
       </div>
     );

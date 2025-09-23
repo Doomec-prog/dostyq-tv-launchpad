@@ -12,9 +12,17 @@ const AboutSection = () => {
           </p>
           
           <div className="w-full max-w-4xl h-96 bg-dostyq-card rounded-2xl flex items-center justify-center mx-auto relative overflow-hidden">
-            <div className="play-button">
-            </div>
-            <div className="absolute inset-0 bg-gradient-to-br from-transparent to-black/20 rounded-2xl"></div>
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/vjybzLusyN8"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+              className="rounded-2xl"
+            ></iframe>
           </div>
         </div>
       </div>

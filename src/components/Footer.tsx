@@ -4,39 +4,65 @@ const Footer = () => {
   return (
     <footer className="bg-dostyq-header-footer px-8 py-16">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           <div>
-            <h3 className="text-dostyq-text text-lg font-semibold mb-4">Контент</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-dostyq-text hover:text-dostyq-menu-inactive transition-colors">Фильмы</a></li>
-              <li><a href="#" className="text-dostyq-text hover:text-dostyq-menu-inactive transition-colors">Сериалы</a></li>
-              <li><a href="#" className="text-dostyq-text hover:text-dostyq-menu-inactive transition-colors">Документальные</a></li>
-              <li><a href="#" className="text-dostyq-text hover:text-dostyq-menu-inactive transition-colors">Мультфильмы</a></li>
-            </ul>
+            <div className="flex items-center gap-4 mb-6">
+              <img src={logo} alt="Dostyq TV Logo" className="h-12" />
+              <h3 className="text-dostyq-text text-xl font-bold">DOSTYQ TV</h3>
+            </div>
+            <p className="text-dostyq-text text-base mb-6 leading-relaxed">
+              Казахстанский телеканал, объединяющий поколения через качественный культурно-познавательный контент.
+            </p>
+            <div className="space-y-3">
+              <div className="flex items-center gap-3">
+                <span className="text-dostyq-text">📞</span>
+                <a href="tel:+77752880953" className="text-dostyq-text hover:text-dostyq-menu-inactive transition-colors">
+                  +7 775 288 0953
+                </a>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="text-dostyq-text">✉️</span>
+                <a href="mailto:dostyqtv@gmail.com" className="text-dostyq-text hover:text-dostyq-menu-inactive transition-colors">
+                  dostyqtv@gmail.com
+                </a>
+              </div>
+            </div>
           </div>
           
           <div>
-            <h3 className="text-dostyq-text text-lg font-semibold mb-4">О канале</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-dostyq-text hover:text-dostyq-menu-inactive transition-colors">История</a></li>
-              <li><a href="#" className="text-dostyq-text hover:text-dostyq-menu-inactive transition-colors">Команда</a></li>
-              <li><a href="#" className="text-dostyq-text hover:text-dostyq-menu-inactive transition-colors">Карьера</a></li>
-              <li><a href="#" className="text-dostyq-text hover:text-dostyq-menu-inactive transition-colors">Новости</a></li>
+            <h3 className="text-dostyq-text text-lg font-semibold mb-6">Социальные сети</h3>
+            <ul className="space-y-4">
+              <li>
+                <a href="https://www.instagram.com/dostyq.tv/" target="_blank" rel="noopener noreferrer" className="text-dostyq-text hover:text-dostyq-menu-inactive transition-colors flex items-center gap-3">
+                  <span>📷</span> Instagram
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/@DostyqTV" target="_blank" rel="noopener noreferrer" className="text-dostyq-text hover:text-dostyq-menu-inactive transition-colors flex items-center gap-3">
+                  <span>📺</span> YouTube
+                </a>
+              </li>
+              <li>
+                <a href="https://t.me/dostyqtv_bot" target="_blank" rel="noopener noreferrer" className="text-dostyq-text hover:text-dostyq-menu-inactive transition-colors flex items-center gap-3">
+                  <span>📱</span> Telegram
+                </a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/profile.php?id=61578090980138" target="_blank" rel="noopener noreferrer" className="text-dostyq-text hover:text-dostyq-menu-inactive transition-colors flex items-center gap-3">
+                  <span>📘</span> Facebook
+                </a>
+              </li>
+              <li>
+                <a href="mailto:support@dostyq.tv" className="text-dostyq-text hover:text-dostyq-menu-inactive transition-colors flex items-center gap-3">
+                  <span>📧</span> support@dostyq.tv
+                </a>
+              </li>
+              <li>
+                <a href="tel:+77272424" className="text-dostyq-text hover:text-dostyq-menu-inactive transition-colors flex items-center gap-3">
+                  <span>☎️</span> +7 (727) 24-24-24
+                </a>
+              </li>
             </ul>
-          </div>
-          
-          <div>
-            <h3 className="text-dostyq-text text-lg font-semibold mb-4">Поддержка</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-dostyq-text hover:text-dostyq-menu-inactive transition-colors">Помощь</a></li>
-              <li><a href="#" className="text-dostyq-text hover:text-dostyq-menu-inactive transition-colors">Контакты</a></li>
-              <li><a href="#" className="text-dostyq-text hover:text-dostyq-menu-inactive transition-colors">Техподдержка</a></li>
-              <li><a href="#" className="text-dostyq-text hover:text-dostyq-menu-inactive transition-colors">FAQ</a></li>
-            </ul>
-          </div>
-          
-          <div className="flex justify-center items-center">
-            <img src={logo} alt="Dostyq TV Logo" className="h-16" />
           </div>
         </div>
         

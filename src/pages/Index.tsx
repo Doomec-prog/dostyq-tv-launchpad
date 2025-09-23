@@ -47,7 +47,7 @@ const Index = () => {
           <div className="max-w-7xl mx-auto px-8">
             <h2 className="section-title mb-12">Фильмы</h2>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {movies.map((movie) => (
                 <ContentCard key={movie.title} title={movie.title} image={movie.image} />
               ))}
@@ -65,7 +65,7 @@ const Index = () => {
           <div className="max-w-7xl mx-auto px-8">
             <h2 className="section-title mb-12">Сериалы</h2>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {series.map((serie) => (
                 <ContentCard key={serie.title} title={serie.title} image={serie.image} />
               ))}
