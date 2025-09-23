@@ -13,6 +13,9 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        montserrat: ['Montserrat', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -46,6 +49,17 @@ export default {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
+        },
+        dostyq: {
+          'header-footer': "hsl(var(--dostyq-header-footer-bg))",
+          'header-stripe': "hsl(var(--dostyq-header-stripe))",
+          'card': "hsl(var(--dostyq-card-bg))",
+          'section-title': "hsl(var(--dostyq-section-title-bg))",
+          'text': "hsl(var(--dostyq-text-primary))",
+          'menu-inactive': "hsl(var(--dostyq-menu-btn-inactive-bg))",
+          'menu-active': "hsl(var(--dostyq-menu-btn-active-bg))",
+          'menu-active-text': "hsl(var(--dostyq-menu-btn-active-text))",
+          'menu-inactive-text': "hsl(var(--dostyq-menu-btn-inactive-text))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
