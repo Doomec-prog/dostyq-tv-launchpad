@@ -48,8 +48,8 @@ const Header = () => {
       </header>
 
       {/* Header Stripe */}
-      <div className="bg-dostyq-header-stripe">
-        <div className="mx-auto h-1.5 w-full max-w-7xl px-4 sm:px-6 lg:px-8" />
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="h-1.5 bg-dostyq-header-stripe" />
       </div>
 
       {/* Mobile Menu */}
