@@ -1,5 +1,5 @@
 import Header from '@/components/Header';
-import ContentCard from '@/components/ContentCard';
+import ContentSection from '@/components/ContentSection';
 import PartnersCarousel from '@/components/PartnersCarousel';
 import AboutSection from '@/components/AboutSection';
 import Footer from '@/components/Footer';
@@ -42,41 +42,9 @@ const Index = () => {
       <Header />
       
       <main>
-        {/* Movies Section */}
-        <section className="py-16">
-          <div className="max-w-7xl mx-auto px-8">
-            <h2 className="section-title mb-12">Фильмы</h2>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              {movies.map((movie) => (
-                <ContentCard key={movie.title} title={movie.title} image={movie.image} />
-              ))}
-              <ContentCard 
-                isAction={true} 
-                actionText="Все фильмы"
-                title=""
-              />
-            </div>
-          </div>
-        </section>
+        <ContentSection title="Фильмы" items={movies} actionText="Все фильмы" />
 
-        {/* Series Section */}
-        <section className="py-16">
-          <div className="max-w-7xl mx-auto px-8">
-            <h2 className="section-title mb-12">Сериалы</h2>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              {series.map((serie) => (
-                <ContentCard key={serie.title} title={serie.title} image={serie.image} />
-              ))}
-              <ContentCard 
-                isAction={true} 
-                actionText="Все сериалы"
-                title=""
-              />
-            </div>
-          </div>
-        </section>
+        <ContentSection title="Сериалы" items={series} actionText="Все сериалы" />
 
         <PartnersCarousel />
         <AboutSection />
