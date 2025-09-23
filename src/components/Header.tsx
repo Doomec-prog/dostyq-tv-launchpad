@@ -42,7 +42,7 @@ const Header = () => {
             aria-controls="mobile-navigation"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
-            ☰
+            {mobileMenuOpen ? '×' : '☰'}
           </button>
         </div>
       </header>
