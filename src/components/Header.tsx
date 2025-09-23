@@ -10,18 +10,20 @@ const Header = () => {
   return (
     <>
       <header className="h-20 bg-dostyq-header-footer px-8 flex items-center justify-between">
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-3">
           <img src={logo} alt="Dostyq TV Logo" className="h-12" />
-          <h1 className="text-2xl font-bold text-dostyq-text">DOSTYQ TV</h1>
+          <span className="sr-only">Dostyq TV</span>
         </div>
-        
+
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-4">
+        <nav className="hidden md:flex items-center gap-2" aria-label="Основное меню">
           {menuItems.map((item) => (
             <button
               key={item}
               onClick={() => setActiveMenu(item)}
-              className={`px-5 py-2.5 rounded-lg font-semibold transition-all duration-300 hover:brightness-110 ${
+              type="button"
+              aria-current={activeMenu === item ? 'page' : undefined}
+              className={`px-4 py-2 rounded-lg font-semibold transition-all duration-200 hover:brightness-110 ${
                 activeMenu === item ? 'menu-btn-active' : 'menu-btn-inactive'
               }`}
             >
@@ -31,8 +33,9 @@ const Header = () => {
         </nav>
 
         {/* Mobile Menu Button */}
-        <button 
+        <button
           className="md:hidden text-dostyq-text text-2xl"
+          type="button"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           ☰
@@ -53,7 +56,8 @@ const Header = () => {
                   setActiveMenu(item);
                   setMobileMenuOpen(false);
                 }}
-                className={`px-5 py-2.5 rounded-lg font-semibold transition-all duration-300 text-left ${
+                type="button"
+                className={`px-4 py-2 rounded-lg font-semibold transition-all duration-200 text-left ${
                   activeMenu === item ? 'menu-btn-active' : 'menu-btn-inactive'
                 }`}
               >

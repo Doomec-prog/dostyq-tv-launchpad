@@ -1,3 +1,9 @@
+import type { CSSProperties } from 'react';
+
+const marqueeStyle: CSSProperties & { '--marquee-duration'?: string } = {
+  '--marquee-duration': '12s',
+};
+
 const PartnersCarousel = () => {
   const partners = [
     'Телеканал Казахстан',
@@ -16,9 +22,9 @@ const PartnersCarousel = () => {
         <h2 className="section-title mb-12">Наши партнеры</h2>
         
         <div className="h-30 overflow-hidden relative">
-          <div className="flex items-center space-x-16 marquee">
+          <div className="flex items-center space-x-16 marquee" style={marqueeStyle}>
             {[...partners, ...partners, ...partners].map((partner, index) => (
-              <div 
+              <div
                 key={`${partner}-${index}`}
                 className="flex items-center justify-center min-w-[200px] h-12 px-8 bg-dostyq-card rounded-lg"
                 style={{ filter: 'grayscale(1)', opacity: '0.8' }}
