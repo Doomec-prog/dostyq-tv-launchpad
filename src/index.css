@@ -64,7 +64,6 @@
   }
 
   body {
-    font-family: 'Ubuntu', sans-serif;
     background-color: hsl(var(--dostyq-header-footer-bg));
     color: hsl(var(--dostyq-text-primary));
     background-image: url('/src/assets/bg.png');
