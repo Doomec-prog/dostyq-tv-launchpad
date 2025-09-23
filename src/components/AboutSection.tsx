@@ -8,7 +8,7 @@ const AboutSection = () => {
           <p className="text-dostyq-text text-lg mb-12 leading-relaxed">
             DostyqTV - это современный казахстанский телеканал, который предлагает качественный 
             контент для всей семьи. Мы транслируем лучшие фильмы, сериалы и телепередачи, 
-            поддерживая традиции и культуру Казахстана.
+            поддерживая традиции и культуру Евразии.
           </p>
           
           <div className="w-full max-w-4xl h-96 bg-dostyq-card rounded-2xl flex items-center justify-center mx-auto relative overflow-hidden">
