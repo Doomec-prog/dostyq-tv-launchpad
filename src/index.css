@@ -110,7 +110,7 @@
   /* Content Cards */
   .content-card {
     background-color: hsl(var(--dostyq-card-bg));
-    padding: 1rem;
+    padding: 0.75rem;
     border-radius: 0.75rem;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: var(--shadow-elegant);
