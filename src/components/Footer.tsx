@@ -58,9 +58,9 @@ const Footer = () => {
   return (
     <footer className="bg-dostyq-header-footer px-8 py-16">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 justify-items-center md:justify-items-start">
-          <div className="flex flex-col items-center md:items-start text-center md:text-left">
-            <div className="flex items-center gap-4 mb-6 justify-center md:justify-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 justify-items-center">
+          <div className="flex flex-col items-center text-center">
+            <div className="flex items-center gap-4 mb-6 justify-center">
               <img src={logo} alt="Dostyq TV Logo" className="h-12" />
               <h3 className="text-dostyq-text text-xl font-bold">DOSTYQ TV</h3>
             </div>
@@ -69,7 +69,7 @@ const Footer = () => {
             </p>
             <div className="space-y-3 w-full">
               {contacts.map(({ href, icon, text }) => (
-                <div key={href} className="flex items-center gap-3 justify-center md:justify-start">
+                <div key={href} className="flex items-center gap-3 justify-center">
                   <span className="text-dostyq-text">{icon}</span>
                   <a href={href} className="text-dostyq-text hover:text-dostyq-menu-inactive transition-colors">
                     {text}
@@ -79,7 +79,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="flex flex-col items-center md:items-start text-center md:text-left">
+          <div className="flex flex-col items-center text-center">
             <h3 className="text-dostyq-text text-lg font-semibold mb-6">Социальные сети</h3>
             <ul className="space-y-4 w-full">
               {socialLinks.map(({ href, icon, label, target, rel }) => (
@@ -88,7 +88,7 @@ const Footer = () => {
                     href={href}
                     {...(target ? { target } : {})}
                     {...(rel ? { rel } : {})}
-                    className="text-dostyq-text hover:text-dostyq-menu-inactive transition-colors flex items-center gap-3 justify-center md:justify-start"
+                    className="text-dostyq-text hover:text-dostyq-menu-inactive transition-colors flex items-center gap-3 justify-center"
                   >
                     <span>{icon}</span> {label}
                   </a>
