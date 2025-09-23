@@ -1,7 +1,7 @@
 import type { CSSProperties } from 'react';
 
 const marqueeStyle: CSSProperties & { '--marquee-duration'?: string } = {
-  '--marquee-duration': '12s',
+  '--marquee-duration': '18s',
 };
 
 const PartnersCarousel = () => {
@@ -22,6 +22,18 @@ const PartnersCarousel = () => {
         <h2 className="section-title mb-12">Наши партнеры</h2>
         
         <div className="h-30 overflow-hidden relative">
+          <div
+            className="pointer-events-none absolute inset-y-0 left-0 w-24 z-10"
+            style={{
+              background: 'linear-gradient(90deg, hsl(var(--dostyq-header-footer-bg)) 0%, hsla(var(--dostyq-header-footer-bg) / 0) 100%)',
+            }}
+          />
+          <div
+            className="pointer-events-none absolute inset-y-0 right-0 w-24 z-10"
+            style={{
+              background: 'linear-gradient(270deg, hsl(var(--dostyq-header-footer-bg)) 0%, hsla(var(--dostyq-header-footer-bg) / 0) 100%)',
+            }}
+          />
           <div className="flex items-center space-x-16 marquee" style={marqueeStyle}>
             {[...partners, ...partners, ...partners].map((partner, index) => (
               <div
