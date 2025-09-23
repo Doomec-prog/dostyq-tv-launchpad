@@ -64,7 +64,6 @@
   }
 
   body {
-    font-family: 'Montserrat', sans-serif;
     background-color: hsl(var(--dostyq-header-footer-bg));
     color: hsl(var(--dostyq-text-primary));
     background-image: url('/src/assets/bg.png');
@@ -75,7 +74,16 @@
   }
 
   html {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Merriweather', serif;
   }
 }
 
@@ -138,7 +146,14 @@
   }
 
   .marquee {
-    animation: marquee 30s linear infinite;
+    --marquee-duration: 18s;
+    animation: marquee var(--marquee-duration) linear infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .marquee {
+      animation-play-state: paused;
+    }
   }
 
   /* Play Button */

@@ -75,7 +75,6 @@ const Footer = () => {
           <div className="flex flex-col items-center gap-6">
             <div className="flex flex-col items-center gap-4">
               <img src={logo} alt="Dostyq TV Logo" className="h-12" />
-              <h3 className="text-dostyq-text text-2xl font-bold tracking-wide">DOSTYQ TV</h3>
             </div>
             <p className="max-w-lg text-dostyq-text text-base leading-relaxed">
               Казахстанский телеканал, объединяющий поколения через качественный культурно-познавательный контент.
@@ -115,9 +114,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-dostyq-header-stripe pt-6 text-center">
-          <p className="text-dostyq-text text-sm">
-            © 2024 DOSTYQ TV. Все права защищены.
-          </p>
+          <p className="text-dostyq-text text-sm">© 2024. Все права защищены.</p>
         </div>
       </div>
     </footer>
