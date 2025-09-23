@@ -1,5 +1,59 @@
 import logo from '@/assets/logo.svg';
 
+const contacts = [
+  {
+    href: 'tel:+77752880953',
+    icon: '📞',
+    text: '+7 775 288 0953',
+  },
+  {
+    href: 'mailto:dostyqtv@gmail.com',
+    icon: '✉️',
+    text: 'dostyqtv@gmail.com',
+  },
+];
+
+const socialLinks = [
+  {
+    href: 'https://www.instagram.com/dostyq.tv/',
+    icon: '📷',
+    label: 'Instagram',
+    target: '_blank',
+    rel: 'noopener noreferrer',
+  },
+  {
+    href: 'https://www.youtube.com/@DostyqTV',
+    icon: '📺',
+    label: 'YouTube',
+    target: '_blank',
+    rel: 'noopener noreferrer',
+  },
+  {
+    href: 'https://t.me/dostyqtv_bot',
+    icon: '📱',
+    label: 'Telegram',
+    target: '_blank',
+    rel: 'noopener noreferrer',
+  },
+  {
+    href: 'https://www.facebook.com/profile.php?id=61578090980138',
+    icon: '📘',
+    label: 'Facebook',
+    target: '_blank',
+    rel: 'noopener noreferrer',
+  },
+  {
+    href: 'mailto:support@dostyq.tv',
+    icon: '📧',
+    label: 'support@dostyq.tv',
+  },
+  {
+    href: 'tel:+77272424',
+    icon: '☎️',
+    label: '+7 (727) 24-24-24',
+  },
+];
+
 const Footer = () => {
   return (
     <footer className="bg-dostyq-header-footer px-8 py-16">
@@ -14,80 +68,32 @@ const Footer = () => {
               Казахстанский телеканал, объединяющий поколения через качественный культурно-познавательный контент.
             </p>
             <div className="space-y-3 w-full">
-              <div className="flex items-center gap-3 justify-center md:justify-start">
-                <span className="text-dostyq-text">📞</span>
-                <a href="tel:+77752880953" className="text-dostyq-text hover:text-dostyq-menu-inactive transition-colors">
-                  +7 775 288 0953
-                </a>
-              </div>
-              <div className="flex items-center gap-3 justify-center md:justify-start">
-                <span className="text-dostyq-text">✉️</span>
-                <a href="mailto:dostyqtv@gmail.com" className="text-dostyq-text hover:text-dostyq-menu-inactive transition-colors">
-                  dostyqtv@gmail.com
-                </a>
-              </div>
+              {contacts.map(({ href, icon, text }) => (
+                <div key={href} className="flex items-center gap-3 justify-center md:justify-start">
+                  <span className="text-dostyq-text">{icon}</span>
+                  <a href={href} className="text-dostyq-text hover:text-dostyq-menu-inactive transition-colors">
+                    {text}
+                  </a>
+                </div>
+              ))}
             </div>
           </div>
 
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <h3 className="text-dostyq-text text-lg font-semibold mb-6">Социальные сети</h3>
             <ul className="space-y-4 w-full">
-              <li>
-                <a
-                  href="https://www.instagram.com/dostyq.tv/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-dostyq-text hover:text-dostyq-menu-inactive transition-colors flex items-center gap-3 justify-center md:justify-start"
-                >
-                  <span>📷</span> Instagram
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.youtube.com/@DostyqTV"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-dostyq-text hover:text-dostyq-menu-inactive transition-colors flex items-center gap-3 justify-center md:justify-start"
-                >
-                  <span>📺</span> YouTube
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://t.me/dostyqtv_bot"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-dostyq-text hover:text-dostyq-menu-inactive transition-colors flex items-center gap-3 justify-center md:justify-start"
-                >
-                  <span>📱</span> Telegram
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.facebook.com/profile.php?id=61578090980138"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-dostyq-text hover:text-dostyq-menu-inactive transition-colors flex items-center gap-3 justify-center md:justify-start"
-                >
-                  <span>📘</span> Facebook
-                </a>
-              </li>
-              <li>
-                <a
-                  href="mailto:support@dostyq.tv"
-                  className="text-dostyq-text hover:text-dostyq-menu-inactive transition-colors flex items-center gap-3 justify-center md:justify-start"
-                >
-                  <span>📧</span> support@dostyq.tv
-                </a>
-              </li>
-              <li>
-                <a
-                  href="tel:+77272424"
-                  className="text-dostyq-text hover:text-dostyq-menu-inactive transition-colors flex items-center gap-3 justify-center md:justify-start"
-                >
-                  <span>☎️</span> +7 (727) 24-24-24
-                </a>
-              </li>
+              {socialLinks.map(({ href, icon, label, target, rel }) => (
+                <li key={href}>
+                  <a
+                    href={href}
+                    {...(target ? { target } : {})}
+                    {...(rel ? { rel } : {})}
+                    className="text-dostyq-text hover:text-dostyq-menu-inactive transition-colors flex items-center gap-3 justify-center md:justify-start"
+                  >
+                    <span>{icon}</span> {label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
