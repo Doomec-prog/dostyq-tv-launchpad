@@ -9,26 +9,27 @@ const Header = () => {
 
   return (
     <>
-      <header className="bg-dostyq-header-footer">
+      <header className="bg-[hsla(var(--dostyq-header-footer-bg)/0.85)] backdrop-blur-xl">
         <div className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-3">
-            <img src={logo} alt="Dostyq TV Logo" className="h-16 w-auto flex-shrink-0" />
+            <img src={logo} alt="Dostyq TV Logo" className="h-16 w-auto flex-shrink-0 drop-shadow-lg" />
             <span className="sr-only">Dostyq TV</span>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-2" aria-label="Основное меню">
+          <nav
+            className="hidden md:flex items-center gap-1 rounded-full border border-white/10 bg-white/5 px-1 py-1 backdrop-blur-xl shadow-lg shadow-black/20"
+            aria-label="Основное меню"
+          >
             {menuItems.map((item) => (
               <button
                 key={item}
                 onClick={() => setActiveMenu(item)}
                 type="button"
                 aria-current={activeMenu === item ? 'page' : undefined}
-                className={`px-4 py-2 rounded-lg font-semibold transition-all duration-200 hover:brightness-110 ${
-                  activeMenu === item ? 'menu-btn-active' : 'menu-btn-inactive'
-                }`}
+                className={`menu-btn-shared ${activeMenu === item ? 'menu-btn-active' : 'menu-btn-inactive'}`}
               >
-                {item}
+                <span className="relative z-10">{item}</span>
               </button>
             ))}
           </nav>
@@ -47,14 +48,14 @@ const Header = () => {
         </div>
       </header>
 
-      {/* Header Stripe */}
+      {/* Header Divider */}
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="h-1.5 bg-dostyq-header-stripe" />
+        <div className="h-px bg-white/15" />
       </div>
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-dostyq-header-footer shadow-lg">
+        <div className="md:hidden bg-dostyq-header-footer/90 backdrop-blur-xl shadow-2xl shadow-black/40">
           <div className="mx-auto w-full max-w-7xl px-4 pb-6 pt-4 sm:px-6 lg:px-8">
             <nav id="mobile-navigation" className="flex flex-col gap-2" aria-label="Мобильное меню">
               {menuItems.map((item) => (
@@ -65,9 +66,7 @@ const Header = () => {
                     setMobileMenuOpen(false);
                   }}
                   type="button"
-                  className={`px-4 py-2 rounded-lg font-semibold transition-all duration-200 text-left hover:brightness-110 ${
-                    activeMenu === item ? 'menu-btn-active' : 'menu-btn-inactive'
-                  }`}
+                  className={`menu-btn-mobile ${activeMenu === item ? 'menu-btn-active' : 'menu-btn-inactive'}`}
                 >
                   {item}
                 </button>
