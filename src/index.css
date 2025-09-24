@@ -135,10 +135,28 @@
     box-shadow: var(--shadow-glow);
   }
 
+  .carousel-fade-left {
+    @apply pointer-events-none absolute inset-y-0 left-0 w-24 z-10;
+    background: linear-gradient(
+      90deg,
+      hsl(var(--dostyq-header-footer-bg)) 0%,
+      hsla(var(--dostyq-header-footer-bg) / 0) 100%
+    );
+  }
+
+  .carousel-fade-right {
+    @apply pointer-events-none absolute inset-y-0 right-0 w-24 z-10;
+    background: linear-gradient(
+      270deg,
+      hsl(var(--dostyq-header-footer-bg)) 0%,
+      hsla(var(--dostyq-header-footer-bg) / 0) 100%
+    );
+  }
+
   /* Carousel Animation */
   @keyframes marquee {
     0% {
-      transform: translateX(100%);
+      transform: translateX(0);
     }
     100% {
       transform: translateX(-100%);

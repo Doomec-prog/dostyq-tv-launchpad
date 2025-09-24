@@ -1,9 +1,3 @@
-import type { CSSProperties } from 'react';
-
-const marqueeStyle: CSSProperties & { '--marquee-duration'?: string } = {
-  '--marquee-duration': '18s',
-};
-
 const PartnersCarousel = () => {
   const partners = [
     'Телеканал Казахстан',
@@ -24,12 +18,11 @@ const PartnersCarousel = () => {
         <div className="h-30 overflow-hidden relative">
           <div className="pointer-events-none absolute inset-y-0 left-0 w-24 z-10 bg-gradient-to-r from-dostyq-header-footer to-transparent" />
           <div className="pointer-events-none absolute inset-y-0 right-0 w-24 z-10 bg-gradient-to-l from-dostyq-header-footer to-transparent" />
-          <div className="flex items-center space-x-16 marquee" style={marqueeStyle}>
+          <div className="flex items-center space-x-16 marquee">
             {[...partners, ...partners, ...partners].map((partner, index) => (
               <div
                 key={`${partner}-${index}`}
-                className="flex items-center justify-center min-w-[200px] h-12 px-8 bg-dostyq-card rounded-lg"
-                style={{ filter: 'grayscale(1)', opacity: '0.8' }}
+                className="flex items-center justify-center min-w-[200px] h-12 px-8 bg-dostyq-card rounded-lg grayscale opacity-80"
               >
                 <span className="text-dostyq-text font-semibold text-sm whitespace-nowrap">
                   {partner}
