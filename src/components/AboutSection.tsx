@@ -6,12 +6,12 @@ const AboutSection = () => {
         
         <div className="max-w-4xl mx-auto">
           <p className="text-dostyq-text text-lg mb-12 leading-relaxed">
-            DostyqTV - это современный казахстанский телеканал, который предлагает качественный 
-            контент для всей семьи. Мы транслируем лучшие фильмы, сериалы и телепередачи, 
+            DostyqTV - это современный казахстанский телеканал, который предлагает качественный
+            контент для всей семьи. Мы транслируем лучшие фильмы, сериалы и телепередачи,
             поддерживая традиции и культуру Евразии.
           </p>
-          
-          <div className="w-full max-w-4xl h-96 bg-dostyq-card rounded-2xl flex items-center justify-center mx-auto relative overflow-hidden">
+
+          <div className="relative w-full aspect-video bg-dostyq-card rounded-2xl shadow-xl mx-auto overflow-hidden">
             <iframe
               width="100%"
               height="100%"
@@ -21,7 +21,7 @@ const AboutSection = () => {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
-              className="rounded-2xl"
+              className="absolute inset-0 h-full w-full"
             ></iframe>
           </div>
         </div>
