@@ -16,8 +16,8 @@ const PartnersCarousel = () => {
         <h2 className="section-title mb-12">Наши партнеры</h2>
         
         <div className="h-30 overflow-hidden relative">
-          <div className="carousel-fade-left" />
-          <div className="carousel-fade-right" />
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-24 z-10 bg-gradient-to-r from-dostyq-header-footer to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-24 z-10 bg-gradient-to-l from-dostyq-header-footer to-transparent" />
           <div className="flex items-center space-x-16 marquee">
             {[...partners, ...partners, ...partners].map((partner, index) => (
               <div
