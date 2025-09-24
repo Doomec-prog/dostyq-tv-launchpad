@@ -144,7 +144,8 @@
   }
 
   .menu-btn-mobile {
-    @apply w-full rounded-2xl px-5 py-3 text-left text-base font-semibold transition-all duration-300;
+    @apply w-full rounded-2xl px-5 py-3 text-left text-base font-semibold;
+    transition: var(--transition-smooth);
     background: hsla(var(--dostyq-text-primary) / 0.05);
     color: hsla(var(--dostyq-text-primary) / 0.75);
   }
